@@ -1,0 +1,188 @@
+html {
+height: 100%;
+}
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+@font-face {
+font-family: 'regular';
+src: url('./font/HelveticaNowDisplay-Regular.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+h1 {
+line-height: 0.85;
+text-align: left;
+font-size: 48px;
+color:black}
+
+.marginruiz {
+margin-bottom: 5px
+}
+
+p {
+line-height: 0.9;
+text-align: left;
+font-size: 18px;
+color:rgb(80, 80, 80);}
+
+a {
+line-height: 1.5;
+text-align: left;
+font-size: 18px;
+color:rgb(80, 80, 80);
+text-decoration: none;}
+
+
+body {
+font-family:"regular";
+min-height: 100%;
+background-color: white;
+}
+
+.under-top{
+margin-top: 10px;
+margin-bottom: 10px;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+line-height: 0.9;
+text-align: center;
+font-size: 18px;
+color:rgb(207, 53, 15);
+grid-area: under-top;
+}
+
+.under-left{
+display: flex;
+justify-content: left;
+align-items: center;
+line-height: 0.9;
+text-align: left;
+font-size: 18px;
+color:rgb(207, 53, 15);
+grid-area: under-left;
+}
+
+@media screen and (max-width: 1000px) {
+.under-left{
+display:none;
+}
+}
+
+.under-right{
+display: flex;
+justify-content:flex-end;
+align-items: center;
+line-height: 0.9;
+text-align: left;
+font-size: 18px;
+color:rgb(207, 53, 15);
+grid-area: under-right;
+}
+
+@media screen and (max-width: 1000px) {
+.under-right{
+ display:none;
+}
+}
+
+.rotate180 {
+transform: rotate(180deg);
+}
+
+.rotate90 {
+display: flex;
+transform: rotate(90deg);
+}
+
+.rotate-90 {
+transform: rotate(-90deg);
+}
+
+.under-bottom {
+margin-bottom: 10px;
+margin-top: 10px;
+display: flex;
+justify-content: center;
+align-items: flex-end;
+line-height: 0.9;
+text-align: center;
+font-size: 18px;
+color:rgb(207, 53, 15);
+grid-area: under-bottom;
+}
+
+.title{
+margin-left: 10px;
+grid-area: title;;
+}
+
+.instagram{
+margin-left: 10px;
+grid-area: instagram;
+display: flex;
+align-items: center;
+text-align:left;
+}
+
+.contact{
+margin-left: 10px;
+margin-bottom: 10px;
+grid-area: contact;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: flex-start;
+}
+
+
+
+.spoon{
+grid-area: spoon;
+width: 100%;
+height:fit-content;
+}
+
+.box {
+display: grid;
+grid-template:
+"under-top" 50px
+"title" auto
+"instagram" auto
+"contact" auto
+"spoon" auto
+"under-bottom" 50px;
+}
+
+@media (min-width: 700px) {
+.box {
+display: grid;
+grid-template:
+"under-top under-top" auto
+"title spoon" 222.6666666666667px
+"instagram spoon" 222.6666666666667px
+"contact spoon" 222.6666666666667px
+"under-bottom under-bottom" auto/
+auto   386px;
+}
+}
+
+@media (min-width: 1000px) {
+.box {
+display: grid;
+grid-template:
+"under-top under-top under-top under-top" auto
+"under-left title spoon under-right" 222.6666666666667px
+"under-left instagram spoon under-right" 222.6666666666667px
+"under-left contact spoon under-right" 222.6666666666667px
+"under-bottom under-bottom under-bottom under-bottom" auto
+/
+auto   400px   386px   auto;
+}
+}
